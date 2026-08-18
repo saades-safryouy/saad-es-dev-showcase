@@ -177,13 +177,11 @@ export const certifications: Certification[] = [
     name: "Certification name",
     issuer: "Issuing organization",
     date: "Date",
-    credentialUrl: undefined,
   },
   {
     name: "Certification name",
     issuer: "Issuing organization",
     date: "Date",
-    credentialUrl: undefined,
   },
 ];
 
