@@ -7,10 +7,10 @@ export const profile = {
   intro:
     "Software Engineering graduate with experience in full-stack development, IT support, and enterprise environments. I build reliable, scalable, and user-focused applications using modern technologies.",
   status: "Available for opportunities",
-  email: "contact@example.com", // TODO: replace with your email
-  github: "https://github.com/", // TODO: replace with your GitHub profile
-  linkedin: "https://www.linkedin.com/", // TODO: replace with your LinkedIn profile
-  cvUrl: "/cv.pdf", // TODO: place your CV at public/cv.pdf
+  email: "saadessafryouy@gmail.com", // TODO: replace with your email
+  github: "https://github.com/saades-safryouy/", // TODO: replace with your GitHub profile
+  linkedin: "https://www.linkedin.com/in/saad-es-safryouy-171930176/", // TODO: replace with your LinkedIn profile
+  cvUrl: "/CV_ES-SAFRYOUY_Saad_Developpeur.pdf", // TODO: place your CV at public/cv.pdf
   location: "Morocco",
 };
 
@@ -45,21 +45,23 @@ export type Experience = {
 };
 
 export const experiences: Experience[] = [
+ {
+  company: "Munisys",
+  role: "IT Support Technician",
+  context: "Banking / enterprise IT environment",
+  points: [
+    "Provided Level 1 technical support for business users",
+    "Diagnosed and resolved hardware and software incidents",
+    "Set up and maintained workstations and peripherals",
+    "Performed basic network troubleshooting",
+    "Managed and followed up on incidents and service requests",
+    "Worked with ServiceNow for incident and request management",
+    "Assisted users in an enterprise IT environment",
+  ],
+  stack: ["ServiceNow", "IT Support", "ITSM", "Windows", "Networking"],
+},
   {
     company: "Attijariwafa Bank",
-    role: "IT Support Technician",
-    context: "Banking / enterprise IT environment",
-    points: [
-      "Level 1 technical support for business users",
-      "Hardware and software troubleshooting",
-      "Workstation setup and support",
-      "Network troubleshooting",
-      "Incident management and follow-up",
-      "User assistance in an enterprise IT environment",
-    ],
-  },
-  {
-    company: "Munisys",
     role: "Full-Stack Developer — PFE / Internship",
     context: "Web Platform for Managing Calls for Applications",
     points: [
@@ -71,17 +73,17 @@ export const experiences: Experience[] = [
     ],
     stack: ["React", "Spring Boot", "Java", "MySQL", "REST APIs", "Git"],
   },
-  {
-    company: "Atos",
-    role: "ServiceNow Training & Experience",
-    context: "IT service management",
+ {
+    company: "ONEE",
+    role: "Software Development Intern — DSI",
+    context: "Call for Applications Management Project",
     points: [
-      "Exposure to the ServiceNow platform",
-      "IT service management practices",
-      "Incident and request management workflows",
-      "Complementary training on Windows Server",
+      "Developed a web application for managing calls for applications",
+      "Participated in the design and development of the application's features",
+      "Implemented backend functionality using C# and ASP.NET",
+      "Worked with application data management and business workflows",
     ],
-    stack: ["ServiceNow", "ITSM", "Windows Server"],
+    stack: ["C#", "ASP.NET", "SQL Server", "Web Development"],
   },
 ];
 
@@ -128,20 +130,20 @@ export const projects: Project[] = [
     featured: true,
   },
   {
-    title: "Project slot — add your next project",
-    shortName: "Coming soon",
+    title: "Argan Beauty — E-commerce Platform",
+    shortName: "Argan Beauty",
     description:
-      "Placeholder card. Replace the title, description, technologies and links in src/data/portfolio.ts.",
-    tech: ["TBD"],
-    placeholder: true,
+      "A modern e-commerce web platform for a Moroccan beauty brand specializing in argan-based products. The application provides product browsing, category management, a shopping experience, and a responsive user interface designed to showcase Moroccan beauty products.",
+    tech: ["React", "JavaScript", "Tailwind CSS", "PHP", "MySQL", "REST API"],
+    placeholder: false,
   },
   {
-    title: "Project slot — add your next project",
-    shortName: "Coming soon",
+    title: "Car Rental Management Platform",
+    shortName: "Car Rental",
     description:
-      "Placeholder card. Replace the title, description, technologies and links in src/data/portfolio.ts.",
-    tech: ["TBD"],
-    placeholder: true,
+      "A web-based car rental platform designed to simplify vehicle management and the rental process. The application allows users to browse available vehicles, view rental information, and manage bookings through a modern and responsive interface.",
+    tech: ["React", "JavaScript", "Laravel", "PHP", "MySQL", "REST API"],
+    placeholder: false,
   },
 ];
 
@@ -152,16 +154,16 @@ export const skillGroups = [
   },
   {
     category: "Backend",
-    items: ["Java", "Spring Boot", "REST APIs", "PHP", "Python", "C# / .NET"],
+    items: ["Java", "Spring Boot", "REST APIs", "Laravel", "PHP", "Python", "C# / .NET"],
   },
-  { category: "Database", items: ["MySQL", "SQL"] },
+  { category: "Database", items: ["MySQL", "SQL", "MongoDB"] },
   {
     category: "Tools & DevOps",
     items: ["Git", "GitHub", "Maven", "Postman", "VS Code", "IntelliJ IDEA"],
   },
   {
     category: "IT & Systems",
-    items: ["Windows Server", "ServiceNow", "IT Support", "Troubleshooting", "Networking"],
+    items: ["Windows Server", "Ubuntu Server", "ServiceNow", "IT Support", "Troubleshooting", "Networking"],
   },
 ];
 
@@ -174,27 +176,34 @@ export type Certification = {
 
 export const certifications: Certification[] = [
   {
-    name: "Certification name",
-    issuer: "Issuing organization",
-    date: "Date",
+    name: "ChatGPT Prompt Engineering for Developers",
+    issuer: "Deeplearning.ai",
+    date: "2024-12-01",
   },
   {
-    name: "Certification name",
+    name: "Relational to Document Model MongoDB",
     issuer: "Issuing organization",
-    date: "Date",
+    date: "2025-11-01",
   },
 ];
 
 export const education = [
   {
     school: "ESTEM",
-    degree: "Professional Bachelor's Degree in Software Engineering",
-    detail: "3rd Year — Professional Bachelor's Degree in Software Engineering",
-    period: "",
+    degree: "Bachelor's Degree in Software Engineering",
+    detail: "3rd Year — Bachelor's Degree in Software Engineering",
+    period: "16/10/2025 - 22/07/2026",
   },
+  {
+    school: "OFPPT",
+    degree: "Web Full-Stack Development",
+    detail: "Diploma in Web Full-Stack Development",
+    period: "03/9/2023 - 26/07/2025",
+  }
 ];
 
 export const repositories = [
-  { name: "Repository name", description: "Short repository description.", url: profile.github },
-  { name: "Repository name", description: "Short repository description.", url: profile.github },
+  { name: "call_management", description: "Call for application management system.", url: "https://github.com/saades-safryouy/call_management" },
+  { name: "argan_beauty", description: "E-commerce platform for argan-based products.", url: "https://github.com/maz-s3d3/Argan-Beauty" },
+  { name: "car_rental", description: "Car rental management platform.", url: "https://github.com/saades-safryouy/car_rental" },
 ];
