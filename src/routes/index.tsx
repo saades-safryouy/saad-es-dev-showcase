@@ -12,7 +12,7 @@ import { Footer } from "@/components/portfolio/Footer";
 
 const title = "Saad ES-SAFRYOUY | Software Engineer & Full-Stack Developer";
 const description =
-  "Portfolio of Saad ES-SAFRYOUY, a Software Engineer and Full-Stack Developer specializing in modern web applications, Java, Spring Boot, React, and software development.";
+  "Saad ES-SAFRYOUY, a Software Engineer and Full-Stack Developer specializing in modern web applications, Java, Spring Boot, React, and software development.";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -46,6 +46,22 @@ export const Route = createFileRoute("/")({
 function Index() {
   return (
     <div className="min-h-screen bg-background">
+      <meta
+  name="description"
+  content="Saad ES-SAFRYOUY — Software Engineer and IT Support Technician specializing in Java, Spring Boot, React, TypeScript, web development and enterprise IT support."
+/>
+
+<meta
+  name="keywords"
+  content="Saad ES-SAFRYOUY, Software Engineer, React Developer, TypeScript Developer, Java Developer, Spring Boot, IT Support, Morocco"
+/>
+
+<meta name="author" content="Saad ES-SAFRYOUY" />
+
+<meta name="robots" content="index, follow" />
+
+<link rel="canonical" href="https://YOUR-DOMAIN.com/" />
+
       <a
         href="#about"
         className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[60] focus:rounded-md focus:bg-primary focus:px-4 focus:py-2 focus:text-sm focus:text-primary-foreground"
