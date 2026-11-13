@@ -1,8 +1,12 @@
 import { ArrowUpRight, Github } from "lucide-react";
 import { Reveal } from "./Reveal";
-import { profile, repositories } from "@/data/portfolio";
+import { profile } from "@/data/portfolio";
+import { useGithubProjects } from "@/hooks/useGithubProjects";
 
 export function GitHubSection() {
+  const { data: projects, isLoading, isError } = useGithubProjects();
+  const displayRepos = projects ?? [];
+
   return (
     <section className="relative mx-auto w-full max-w-6xl px-5 py-20 sm:px-8 md:py-24">
       <Reveal>
@@ -27,26 +31,42 @@ export function GitHubSection() {
               </a>
             </div>
 
-            <ul className="grid gap-3">
-              {repositories.map((repo, i) => (
-                <li key={`${repo.name}-${i}`}>
-                  <a
-                    href={repo.url}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="group flex items-start justify-between gap-4 rounded-xl border border-border bg-surface/60 p-4 transition-colors hover:border-primary/40"
-                  >
-                    <span>
-                      <span className="block font-mono text-sm text-foreground">{repo.name}</span>
-                      <span className="mt-1 block text-sm text-muted-foreground">
-                        {repo.description}
+            {isLoading ? (
+              <ul className="grid gap-3 animate-pulse">
+                {[1, 2, 3].map((n) => (
+                  <li key={n} className="h-20 rounded-xl border border-border bg-surface/60 p-4" />
+                ))}
+              </ul>
+            ) : isError ? (
+              <div className="rounded-xl border border-border bg-surface/60 p-6 text-center text-sm text-muted-foreground">
+                Unable to load GitHub repositories.
+              </div>
+            ) : displayRepos.length === 0 ? (
+              <div className="rounded-xl border border-border bg-surface/60 p-6 text-center text-sm text-muted-foreground">
+                No repositories found.
+              </div>
+            ) : (
+              <ul className="grid gap-3">
+                {displayRepos.map((repo, i) => (
+                  <li key={`${repo.name}-${i}`}>
+                    <a
+                      href={repo.url}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="group flex items-start justify-between gap-4 rounded-xl border border-border bg-surface/60 p-4 transition-colors hover:border-primary/40"
+                    >
+                      <span>
+                        <span className="block font-mono text-sm text-foreground">{repo.name}</span>
+                        <span className="mt-1 block text-sm text-muted-foreground line-clamp-2">
+                          {repo.description ?? "No description provided."}
+                        </span>
                       </span>
-                    </span>
-                    <ArrowUpRight className="h-4 w-4 shrink-0 text-muted-foreground transition-transform duration-200 group-hover:-translate-y-0.5 group-hover:text-primary" />
-                  </a>
-                </li>
-              ))}
-            </ul>
+                      <ArrowUpRight className="h-4 w-4 shrink-0 text-muted-foreground transition-transform duration-200 group-hover:-translate-y-0.5 group-hover:text-primary" />
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            )}
           </div>
         </div>
       </Reveal>
