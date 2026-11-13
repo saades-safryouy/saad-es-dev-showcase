@@ -8,7 +8,7 @@ export const profile = {
   email: "saadessafryouy@gmail.com", // TODO: replace with your email
   github: "https://github.com/saades-safryouy/", // TODO: replace with your GitHub profile
   linkedin: "https://www.linkedin.com/in/saad-es-safryouy-171930176/", // TODO: replace with your LinkedIn profile
-  cvUrl: "/CV_ES-SAFRYOUY_Saad_Developpeur.pdf", // TODO: place your CV at public/cv.pdf
+  cvUrl: "/CV_Dev_ATS_FR.pdf", // TODO: place your CV at public/cv.pdf
   location: "Morocco, Casablanca",
 };
 

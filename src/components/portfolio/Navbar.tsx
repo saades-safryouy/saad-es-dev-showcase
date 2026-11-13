@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { navItems, profile } from "@/data/portfolio";
 import { cn } from "@/lib/utils";
-
+import logo from "../../assets/logo.png";
 export function Navbar() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -46,8 +46,8 @@ export function Navbar() {
         className="mx-auto flex h-16 w-full max-w-6xl items-center justify-between px-5 sm:px-8"
       >
         <a href="#home" className="group flex items-center gap-2">
-          <span className="grid h-8 w-8 place-items-center rounded-md border border-border bg-surface font-mono text-sm text-primary">
-            S
+          <span className="grid h-8 w-8 place-items-center  bg-transparent font-mono text-sm text-primary">
+            <img src={logo} alt="Logo" />
           </span>
           <span className="hidden text-sm font-medium tracking-tight sm:block">
             Saad ES-SAFRYOUY
